@@ -40,6 +40,7 @@ q, p, masses = compute.init_variables(ntraj, 1)
 compute.md(q, p, masses, prms)
 plot.plot({ "filename":F"{prefix}.pt", "prefix":prefix, "do_show":False, "which_timesteps":[0, 100, 200, 300, 399] })
 
+
 #========== Case 2 ==========
 prefix = "classical-MartensI-case2-1"
 prms = dict(params); prms.update({"prefix":prefix})
@@ -61,5 +62,6 @@ prms = dict(params); prms.update({"prefix":prefix, "ham_params": {"Va": 0.00625,
 q, p, masses = compute.init_variables(ntraj, 2)
 compute.md(q, p, masses, prms)
 plot.plot({ "filename":F"{prefix}.pt", "prefix":prefix, "do_show":False, "which_timesteps":[0, 100, 200, 300, 399] })
+
 
 
